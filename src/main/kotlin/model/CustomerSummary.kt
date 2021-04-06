@@ -1,6 +1,6 @@
 package model
 
-data class customerSummary(
+data class CustomerSummary(
     val customerId: Long,
     var totalCostInCents: Int = 0,
     val trips: List<OutputTrip>

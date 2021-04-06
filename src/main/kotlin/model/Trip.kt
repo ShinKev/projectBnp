@@ -4,12 +4,20 @@ data class Trip(
     val stationStart: Station,
     val stationEnd: Station,
     val startedJourneyAt: Long,
-    val costInCents: Int,
-    val zoneFrom: Zone,
-    val zoneTo: Zone
+    var costInCents: Int = 0,
+    var zoneFrom: Zone = Zone.ONE,
+    var zoneTo: Zone = Zone.ONE
 ) {
-    fun toOutputTrip() =
-        OutputTrip(stationStart, stationEnd, startedJourneyAt, costInCents, zoneFrom.getZoneInt(), zoneTo.getZoneInt())
+    fun toOutputTrip(): OutputTrip {
+        return OutputTrip(
+            stationStart,
+            stationEnd,
+            startedJourneyAt,
+            costInCents,
+            zoneFrom.getZoneInt(),
+            zoneTo.getZoneInt()
+        )
+    }
 }
 
 data class OutputTrip(

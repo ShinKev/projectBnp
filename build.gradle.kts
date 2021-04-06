@@ -13,6 +13,7 @@ repositories {
 }
 
 dependencies {
+    implementation("com.fasterxml.jackson.module", "jackson-module-kotlin", "2.12.2")
     testImplementation(kotlin("test-junit"))
 }
 
