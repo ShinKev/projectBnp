@@ -2,6 +2,7 @@ package process
 
 import model.Station
 import model.Zone
+import process.implementation.TripCostCalculator
 import kotlin.test.BeforeTest
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -12,7 +13,7 @@ class TripCostCalculatorTest {
 
     @BeforeTest
     fun setup() {
-        // Here we will create the tripCostCalculator instance
+        tripCostCalculator = TripCostCalculator()
     }
 
     @Test

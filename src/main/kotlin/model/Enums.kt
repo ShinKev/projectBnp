@@ -4,7 +4,7 @@ enum class Station {
     A, B, C, D, E, F, G, H, I
 }
 
-enum class Zone(stationList: List<Station>) {
+enum class Zone(val stationList: List<Station>) {
     ONE(listOf(Station.A, Station.B)),
     TWO(listOf(Station.C, Station.D, Station.E)),
     THREE(listOf(Station.C, Station.E, Station.F)),

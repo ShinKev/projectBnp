@@ -1,6 +1,7 @@
 package process
 
 import model.*
+import process.implementation.ProcessTap
 import kotlin.test.BeforeTest
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -11,7 +12,7 @@ class ProcessTapTest {
 
     @BeforeTest
     fun setup() {
-        // Here we will create the processTap instance
+        processTap = ProcessTap()
     }
 
     @Test

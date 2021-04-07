@@ -1,9 +1,9 @@
 package process
 
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import model.OutputTrip
 import model.Station
 import model.Tap
+import process.implementation.ProcessInput
 import java.io.File
 import kotlin.test.BeforeTest
 import kotlin.test.Test
@@ -16,7 +16,7 @@ class ProcessInputTest {
 
     @BeforeTest
     fun setup() {
-        // Here we will create the processInput instance
+        processInput = ProcessInput()
     }
 
     @Test
